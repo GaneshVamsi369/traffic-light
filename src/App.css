@@ -1,38 +1,58 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 50px;
+}
+
+.traffic-light {
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+  height: 300px;
+  background-color: black;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.light {
+  width: 80px;
+  height: 80px;
+  margin: 10px auto;
+  border-radius: 50%;
+  background-color: gray;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: 24px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.red.on {
+  background-color: red;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.yellow.on {
+  background-color: yellow;
 }
+
+.green.on {
+  background-color: green;
+}
+
+.pedestrian-button,
+.emergency-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  color: whitesmoke;
+  background-color: black;
+  border-radius: 7px;
+}
+
+.pedestrian-button.requested {
+  background-color: yellow;
+  color: black;
+}
+
